@@ -1,0 +1,772 @@
+﻿focus_tree = {
+	id = russian_republic_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 11
+			tag = SOV
+			OR = {
+			has_government = democratic
+			has_government = liberal
+		}
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+#	focus = {
+#		id = AST_
+#		icon = GFX_goal_generic_construction
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -1
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	############################
+	##### POLITICAL_SECTION ####
+	############################
+
+focus = {
+		id = SOV_kadet_victory
+		icon = GFX_goal_support_democracy
+		
+		x = 30
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		date > 1936.03.09
+		has_government = liberal
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+		ideology = liberal
+		popularity = 0.05
+		}
+		}
+	}
+	
+	focus = {
+		id = SOV_urp_victory
+		icon = GFX_goal_continuous_increase_nu
+		
+		x = 70
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		date > 1936.03.09
+		has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+		ideology = democratic
+		popularity = 0.05
+}
+		}
+	}
+	
+	############################
+	####### DUMA_SECTION #######
+	############################
+	
+	focus = {
+		id = SOV_winning_the_duma
+		icon = GFX_focus_usa_voter_registration_act
+		
+		x = 50
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_kadet_victory focus = SOV_urp_victory}
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = 1_SOV_mod_tt
+		}
+	}
+	
+	focus = {
+		id = SOV_we_need_the_votes
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		
+		x = -6
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_winning_the_duma}
+		relative_position_id = SOV_winning_the_duma
+		available = {
+		has_government = liberal
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+			add_political_power = -50
+			add_to_variable = { SOV_fascist_loyalty_status_amount = -10 }
+			add_to_variable = { SOV_democratic_loyalty_status_amount = -10 }
+			add_to_variable = { SOV_military_loyalty_status_amount = -10 }
+			add_to_variable = { SOV_socialist_loyalty_status_amount = 10 }
+			add_popularity = {
+		ideology = communism
+		popularity = 0.1
+}
+add_popularity = {
+		ideology = marxism
+		popularity = 0.05
+}
+custom_effect_tooltip = decrease_fascist_loyalty
+			custom_effect_tooltip = decrease_conservative_loyalty
+			custom_effect_tooltip = decrease_military_loyalty
+			custom_effect_tooltip = increase_socialist_loyalty
+
+
+		}
+	}
+	
+	focus = {
+		id = SOV_kadet_diplomacy
+		icon = GFX_goal_continuous_def_against_influence
+		
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_winning_the_duma }
+		relative_position_id = SOV_winning_the_duma
+		available = {
+		has_government = liberal
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = SOV_the_new_reforms
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_we_need_the_votes focus = SOV_kadet_diplomacy}
+		relative_position_id = SOV_kadet_diplomacy
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = SOV_side_with_martov
+		icon = GFX_focus_generic_self_management
+		
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_we_need_the_votes }
+		prerequisite = { focus = SOV_the_new_reforms }
+		relative_position_id = SOV_we_need_the_votes
+		available = {
+		has_country_flag = completed_reforms
+		}
+		mutually_exclusive = { focus = SOV_the_people_love_us }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = { SOV_democratic_loyalty_status_amount = 5 }
+			add_to_variable = { SOV_military_loyalty_status_amount = 10 }
+			add_to_variable = { SOV_socialist_loyalty_status_amount = 5 }
+			add_to_variable = { SOV_communist_loyalty_status_amount = -5 }
+		add_popularity = {
+			ideology = communism
+		popularity = -0.1
+		}
+		add_popularity = {
+		ideology = marxism
+		popularity = 0.05
+}
+custom_effect_tooltip = decrease_communist_loyalty
+			custom_effect_tooltip = increase_socialist_loyalty
+			custom_effect_tooltip = increase_conservative_loyalty
+			custom_effect_tooltip = increase_military_loyalty
+}
+
+
+		}
+		
+		focus = {
+		id = SOV_invite_the_communists
+		icon = GFX_focus_generic_soviet_politics
+		
+		x = -2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_we_need_the_votes }
+		relative_position_id = SOV_we_need_the_votes
+		available = {
+		
+		}
+		
+
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = { SOV_democratic_loyalty_status_amount = -5 }
+			add_to_variable = { SOV_military_loyalty_status_amount = -10 }
+			add_to_variable = { SOV_socialist_loyalty_status_amount = 5 }
+			add_to_variable = { SOV_communist_loyalty_status_amount = 15 }
+			add_popularity = {
+		ideology = fascism
+		popularity = 0.15
+}
+add_popularity = {
+
+		ideology = paternal_autocrat
+		popularity = 0.05
+}
+add_popularity = {
+		ideology = national_socialism
+		popularity = 0.05
+}
+		custom_effect_tooltip = decrease_fascist_loyalty
+custom_effect_tooltip = decrease_military_loyalty
+custom_effect_tooltip = increase_socialist_loyalty
+custom_effect_tooltip = increase_communist_loyalty
+	}
+	}
+	
+	focus = {
+		id = SOV_empower_the_soviets
+		icon = GFX_focus_generic_join_comintern
+		
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_invite_the_communists }
+		relative_position_id = SOV_invite_the_communists
+		available = {
+		has_country_flag = completed_reforms
+		NOT = {
+		has_completed_focus = SOV_the_people_love_us
+		has_completed_focus = SOV_side_with_martov
+		}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { SOV_democratic_loyalty_status_amount = -15 }
+			add_to_variable = { SOV_military_loyalty_status_amount = -25 }
+			add_to_variable = { SOV_socialist_loyalty_status_amount = 15 }
+			add_to_variable = { SOV_communist_loyalty_status_amount = 50}
+			add_to_variable = { SOV_fascist_loyalty_status_amount = -30}
+			add_popularity = {
+		ideology = communism
+		popularity = 0.15
+}
+			custom_effect_tooltip = decrease_conservative_loyalty
+			custom_effect_tooltip = decrease_conservative_loyalty
+			custom_effect_tooltip = decrease_military_loyalty
+			custom_effect_tooltip = decrease_fascist_loyalty
+			custom_effect_tooltip = increase_socialist_loyalty
+			custom_effect_tooltip = increase_communist_loyalty
+		
+	}
+	}
+	
+	focus = {
+		id = SOV_the_petrograd_talks
+		icon = GFX_goal_generic_war_with_comintern
+		
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_empower_the_soviets }
+		relative_position_id = SOV_empower_the_soviets
+		available = {
+		
+		}
+		
+		mutually_exclusive = { focus = SOV_stick_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { SOV_democratic_loyalty_status_amount = -15 }
+			add_to_variable = { SOV_military_loyalty_status_amount = -25 }
+			add_to_variable = { SOV_socialist_loyalty_status_amount = 15 }
+			add_to_variable = { SOV_communist_loyalty_status_amount = 50}
+			add_to_variable = { SOV_fascist_loyalty_status_amount = -30}
+			add_popularity = {
+		ideology = communism
+		popularity = 0.15
+}
+custom_effect_tooltip = 5_SOV_mod_tt
+custom_effect_tooltip = increase_communist_loyalty
+custom_effect_tooltip = decrease_conservative_loyalty
+custom_effect_tooltip = decrease_fascist_loyalty
+custom_effect_tooltip = decrease_military_loyalty
+custom_effect_tooltip = increase_socialist_loyalty
+
+country_event = { id = RR.2 }
+		
+	}
+	}
+	
+	focus = {
+		id = SOV_fires_of_1927
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_kadet_diplomacy }
+		relative_position_id = SOV_kadet_diplomacy
+		available = {
+		
+		}
+		
+		mutually_exclusive = {  }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 75
+			add_to_variable = { SOV_hundreds_loyalty_status_amount = -10 }
+			add_to_variable = { SOV_fascist_loyalty_status_amount = -5 }
+			add_popularity = {
+		ideology = national_socialism
+		popularity = -0.1
+}
+
+custom_effect_tooltip = decrease_ns_loyalty
+custom_effect_tooltip = decrease_fascist_loyalty
+		
+	}
+	}
+	
+	focus = {
+		id = SOV_the_people_love_us
+		icon = GFX_goal_generic_propaganda
+		
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_fires_of_1927 }
+		prerequisite = { focus = SOV_the_new_reforms }
+		relative_position_id = SOV_fires_of_1927
+		available = {
+		has_country_flag = completed_reforms
+		}
+		
+		mutually_exclusive = { focus = SOV_side_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+		ideology = liberal
+		popularity = 0.1
+}
+	}
+	}
+	
+	focus = {
+		id = SOV_we_are_russias_faithful
+		icon = GFX_focus_generic_home_defense
+		
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_the_people_love_us focus = SOV_side_with_martov }
+		relative_position_id = SOV_the_new_reforms
+		available = {
+		}
+		
+		mutually_exclusive = { focus = SOV_invite_the_communists focus = SOV_side_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+		ideology = liberal
+		popularity = 0.1
+}
+	}
+	}
+	
+	focus = {
+		id = SOV_reign_in_the_radicals
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		
+		x = -2
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_we_are_russias_faithful }
+		relative_position_id = SOV_we_are_russias_faithful
+		available = {
+		}
+		
+		mutually_exclusive = { focus = SOV_invite_the_communists focus = SOV_side_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+		ideology = marxism
+		popularity = 0.05
+}
+add_popularity = {
+		ideology = liberal
+		popularity = 0.05
+}
+add_to_variable = { SOV_socialist_loyalty_status_amount = 15 }
+	}
+	}
+	
+	focus = {
+		id = SOV_negotiate_with_denikin
+		icon = GFX_focus_generic_military_mission
+		
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_we_are_russias_faithful }
+		relative_position_id = SOV_we_are_russias_faithful
+		available = {
+		}
+		
+		mutually_exclusive = { focus = SOV_invite_the_communists focus = SOV_side_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+		ideology = neutrality
+		popularity = 0.1
+}
+add_popularity = {
+		ideology = liberal
+		popularity = -0.05
+}
+add_to_variable = { SOV_military_loyalty_status_amount = 15 }
+	}
+	}
+	
+	focus = {
+		id = SOV_take_care_of_the_right
+		icon = GFX_goal_continuous_boost_freedom
+		
+		x = 2
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_we_are_russias_faithful }
+		relative_position_id = SOV_we_are_russias_faithful
+		available = {
+		}
+		
+		mutually_exclusive = { focus = SOV_invite_the_communists focus = SOV_side_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+		ideology = national_socialism
+		popularity = -0.15
+}
+add_popularity = {
+		ideology = fascism
+		popularity = -0.15
+}
+add_to_variable = { SOV_fascism_loyalty_status_amount = -10 }
+add_to_variable = { SOV_hundreds_loyalty_status_amount = -10 }
+	}
+	}
+	
+	focus = {
+		id = SOV_the_new_progressive_coalition
+		icon = GFX_goal_support_democracy
+		
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = SOV_reign_in_the_radicals }
+		prerequisite = { focus = SOV_negotiate_with_denikin }
+		prerequisite = { focus = SOV_take_care_of_the_right }
+		relative_position_id = SOV_negotiate_with_denikin
+		available = {
+		}
+		
+		mutually_exclusive = { focus = SOV_invite_the_communists focus = SOV_side_with_martov }
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+		ideology = national_socialism
+		popularity = -0.15
+}
+			
+add_popularity = {
+		ideology = fascism
+		popularity = -0.15
+}
+custom_effect_tooltip = decrease_fascist_loyalty
+			custom_effect_tooltip = decrease_ns_loyalty
+add_to_variable = { SOV_fascism_loyalty_status_amount = -10 }
+add_to_variable = { SOV_hundreds_loyalty_status_amount = -10 }
+	}
+	}
+	}

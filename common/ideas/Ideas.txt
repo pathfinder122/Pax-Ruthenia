@@ -1,0 +1,1549 @@
+ideas = {
+
+	country = {
+		USA_failed_economy = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+				consumer_goods_factor = 0.35
+				conscription_factor = -0.5
+				join_faction_tension = 0.40
+			}
+		}
+		ENG_memory_of_moscow_stocks = {
+			picture = moscowstock
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.4
+				consumer_goods_factor = 0.25
+				conscription_factor = -0.45
+				stability_factor = -0.3
+				war_support_factor = -0.2
+			}
+		}
+		ENG_rightwing_attacks = {
+			picture = ENG_attacks
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.01
+				marxism_drift = 0.01
+				stability_factor = -0.1
+			    conscription = -0.03
+			}
+		}
+		ENG_overextension_0 = {
+			picture = overextension0
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.25
+				occupation_cost = -0.1
+				compliance_growth_on_our_occupied_states = 0.05  	
+                required_garrison_factor = -0.05				 	
+                conscription_factor = 0.05
+			}
+		}
+		ENG_overextension_1 = {
+			picture = overextension1
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.02
+				war_support_factor = -0.02
+				political_power_gain = -0.1
+				occupation_cost = 0.05	
+                required_garrison_factor = 0.05				 	
+			}
+		}
+		ENG_political_instability = {
+			picture = ENG_attacks
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				democratic_drift = -0.1
+                stability_weekly = -0.001				
+			}
+		}
+		ENG_overextension_2 = {
+			picture = overextension1
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_gain = -0.15
+				occupation_cost = 0.1	
+                required_garrison_factor = 0.1			 	
+			}
+		}
+		ENG_overextension_3 = {
+			picture = overextension2
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.08
+				war_support_factor = -0.08
+				political_power_gain = -0.2
+				occupation_cost = 0.15
+                required_garrison_factor = 0.15			 	
+			}
+		}
+		ENG_overextension_4 = {
+			picture = overextension2
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.25
+				occupation_cost = 0.2
+                required_garrison_factor = 0.2			 	
+			}
+		}
+		ENG_overextension_5 = {
+			picture = overextension3
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.13
+				war_support_factor = -0.13
+				political_power_gain = -0.35
+				occupation_cost = 0.1
+				compliance_growth_on_our_occupied_states = -0.05  	
+                required_garrison_factor = 0.3			 	
+                conscription_factor = -0.05			 	
+			}
+		}
+		ENG_overextension_6 = {
+			picture = overextension3
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				political_power_gain = -0.4
+				occupation_cost = 0.15
+				compliance_growth_on_our_occupied_states = -0.1
+                required_garrison_factor = 0.35			 	
+                conscription_factor = -0.1				 	
+			}
+		}
+	    ENG_bastion_against_communism = {
+			picture = ENG_bastion
+			
+			allowed = {
+			    tag = ENG
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_acceptance = -80
+				marxism_acceptance = -80
+				democratic_drift = 0.02
+				civil_war_involvement_tension = -0.3
+				lend_lease_tension = -0.5
+			}
+			targeted_modifier = {
+			  tag = USA
+			  attack_bonus_against = 0.1
+			  defense_bonus_against = 0.1
+			}
+		}
+	
+	
+
+		USA_syndicalist_advisors = {
+			picture = generic_agrarian_reform
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = -0.05
+				conscription_factor = -0.05
+                
+			}
+		}
+	
+	   USA_modern_schools = {
+			picture = jap_supremacy_of_will
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.02
+				conscription_factor = -0.03
+                
+			}
+		}
+	
+	
+		USA_technocratic_advisors = {
+			picture = jap_supremacy_of_technology
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = 0.05
+				research_speed_factor = 0.1
+                
+			}
+		}
+
+
+		USA_corrupt_army = {
+	     picture = generic_army_problems
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.15
+				mobilization_speed = -0.05
+				consumer_goods_factor = 0.05
+				research_speed_factor = -0.1
+                
+			}
+		}
+		
+	    USA_anarchist_militias = {
+	     picture = generic_army_problems
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = -0.05
+				army_core_defence_factor = 0.1
+				army_attack_factor = -0.1
+				army_org_factor = -0.2
+				research_speed_factor = -0.1
+                
+			}
+		}
+		
+		USA_anarchist_society = {
+	     picture = generic_army_problems
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = { 
+			 stability_factor = -0.2
+			 war_support_factor = -0.2			       	
+             drift_defence_factor = -0.5
+			 offensive_war_stability_factor = -0.3
+             min_export = 0
+			 consumer_goods_factor = -0.1
+                
+			}
+		}
+
+		USA_moneyless_society = {
+	     picture = spr_anarchist_society
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                line_change_production_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1 
+                global_building_slots = -0.1
+			}
+		}
+		
+		USA_kkk1 = {
+	     picture = USA_kkk
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.30
+				consumer_goods_factor = 0.05
+				national_socialism_drift = 0.02  
+                mobilization_speed = -0.1
+
+			}
+		}
+		
+		USA_kkk2 = {
+	     picture = USA_kkk
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.30
+				consumer_goods_factor = 0.05
+                mobilization_speed = -0.1
+
+			}
+		}
+	
+	    USA_kkk3 = {
+	     picture = USA_kkk
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				consumer_goods_factor = 0.03
+                mobilization_speed = -0.075
+
+			}
+		}
+		
+		USA_socialist_bill_rights = {
+	     picture = USA_kkk
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.20
+                mobilization_speed = 0.1
+                conscription_factor = 0.05
+				female_random_army_leader_chance = 0.3
+
+			}
+		}
+		
+		USA_every_communist_equal = {
+	     picture = USA_kkk
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.20
+                mobilization_speed = 0.1
+                conscription_factor = 0.05
+				female_random_army_leader_chance = 0.3
+
+			}
+		}
+		
+		USA_gus_cult_of_personality = {
+	     picture = USA_kkk
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+                stability_factor = 0.075
+				war_support_weekly = 0.001
+
+			}
+		}
+		
+		
+		USA_unequal_rights = {
+	     picture = segregation
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                conscription_factor = -0.15
+                production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				stability_factor = -0.1
+			}
+		}
+		
+		USA_truman_secure_power = {
+	     picture = FRA_scw_intervention_nationalists_focus
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    liberal_drift = 0.03
+				communism_drift = -0.02
+				stability_factor = -0.1
+			}
+		}
+
+		USA_living_standards_1 = {
+	     picture = generic_goods_red_bonus
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				civilian_factory_use = 2
+                
+			}
+		}
+	
+
+
+		USA_living_standards_2 = {
+	     picture = generic_goods_red_bonus
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				civilian_factory_use = 4
+				stability_weekly = 0.001
+				monthly_population = 0.1
+			}
+		}
+	
+	 USA_living_standards_anarchist = {
+	     picture = generic_goods_red_bonus
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				civilian_factory_use = 3
+				stability_weekly = 0.001
+				monthly_population = 0.05
+			}
+		}
+
+		USA_living_standards_3 = {
+	     picture = generic_goods_red_bonus
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.20
+				civilian_factory_use = 6
+				stability_weekly = 0.001
+				monthly_population = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	
+	
+
+		USA_thriving_economy = {
+	     picture = generic_economic_increase
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             production_speed_buildings_factor = 0.1
+			 consumer_goods_factor = -0.1
+			 
+			}
+		}
+	
+	
+
+		USA_living_standards_0 = {
+	     picture = generic_goods_red_bonus
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 war_support_weekly = -0.001
+			 civilian_factory_use = 1
+			}
+		}
+		US_living_standards_technocracy = {
+	     picture = generic_goods_red_bonus
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 stability_weekly = 0.002
+			 civilian_factory_use = 5
+			 conscription = 0.02
+			 weekly_manpower = 1000
+			}
+		}
+		SNF_american_zaibatsu = {
+	     picture = jap_zaibatsu_ally
+			
+			allowed = {
+			    tag = SNF
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              consumer_goods_factor = 0.05
+			  production_speed_buildings_factor = 0.1
+			}
+		}
+		SNF_japan_resort = {
+	     picture = generic_economic_increase
+			
+			allowed = {
+			    tag = SNF
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              consumer_goods_factor = -0.05
+			  stability_weekly_factor = 0.001			  	
+              line_change_production_efficiency_factor = 0.075
+			}
+		}
+		USA_browders_purge = {
+	     picture = officers_purged
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+               stability_weekly_factor = -0.005
+			   communism_drift = 0.02
+			}
+		}
+		USA_gus_purge = {
+	     picture = officers_purged
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+               stability_weekly_factor = -0.01
+			   communism_drift = 0.07
+			   weekly_manpower = -1000
+			}
+		}
+		USA_aftermath_of_purge = {
+	     picture = officers_purged
+			
+			allowed = {
+			    tag = USA
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+             army_attack_factor = -0.2
+			 army_defence_factor = -0.10
+             command_power_gain = -0.10
+			 conscription = -0.04	
+             army_org_factor = -0.3
+			 land_reinforce_rate = -0.15
+			 
+			}
+		}
+		SNF_japanese_minority = {
+	     picture = jap_militarism_showa
+			
+			allowed = {
+			    tag = SNF
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              	
+              conscription_factor = -0.20
+              stability_weekly_factor = -0.001
+			  production_speed_buildings_factor = -0.20
+			  JAP = { 	
+                  cic_to_target_factor = 0.25
+				}
+			}
+		}
+		SNF_navy_with_a_state = {
+	     picture = jap_interservice_rivalry_navy_strengthened
+			
+			allowed = {
+			    tag = SNF
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              experience_gain_navy = 0.02
+			  naval_accidents_chance = -0.15
+			  naval_damage_factor = 0.1
+              naval_coordination = 0.2
+              industrial_capacity_dockyard = 0.1
+			}
+		}
+		SNF_preparations_for_colonists = {
+	     picture = imperial_glory_idea
+			
+			allowed = {
+			    tag = SNF
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {             	
+              production_speed_buildings_factor = 0.15
+              political_power_gain = -0.15
+			  stability_weekly = -0.001
+			}
+		}
+		JAP_american_zaibatsu = {
+	     picture = jap_zaibatsu_ally
+			
+			allowed = {
+			    tag = JAP
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              consumer_goods_factor = -0.05
+			}
+		}
+		JAP_geacps = {
+	     picture = imperial_glory_idea
+			
+			allowed = {
+			    tag = JAP
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              consumer_goods_factor = -0.05
+              research_speed_factor = 0.05
+			}
+		}
+		geacps_members = {
+	     picture = warrior_traditions_idea
+			
+			allowed = {
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              consumer_goods_factor = -0.03
+              research_speed_factor = 0.03
+			  master_ideology_drift = 0.03
+			  autonomy_gain = -0.3
+			}
+		}
+		asian_parliament = {
+	     picture = warrior_traditions_idea
+			
+			allowed = {
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+              trade_opinion_factor = 0.3
+			  political_power_gain = 0.25
+			}
+		}
+		yen_bloc = {
+	     picture = generic_economic_increase
+			
+			allowed = {
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = -0.15
+			  extra_trade_to_overlord_factor = 0.3
+			  conscription = -0.02
+			  state_resources_factor = 0.05
+			  production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		JAP_east_asian_federation = {
+	     picture = idea_generic_political_support
+			
+			allowed = {
+				always = no
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = -0.15
+			  conscription = 0.05
+			  production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		JAP_weak_naval_command = {
+	     picture = idea_chi_incompetent_officers
+			
+			allowed = {
+			    tag = JAP
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = -0.05
+			  amphibious_invasion = -0.15
+			  naval_coordination = -0.1
+			  screening_efficiency = -0.1
+			  industrial_capacity_dockyard = -0.20
+			}
+		}
+		JAP_naval_build_up = {
+	     picture = idea_generic_sea_focused_navy
+			
+			allowed = {
+			    tag = JAP
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.05
+			   industrial_capacity_dockyard = 0.15
+			}
+		}
+        US_technocratic_economy1 = {
+	     picture = idea_man_five_year_plan_industry
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.05
+			}
+		}
+		US_technocratic_economy2 = {
+	     picture = idea_man_five_year_plan_industry
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.05
+			  production_speed_buildings_factor = 0.1
+			  consumer_goods_factor = -0.03
+			}
+		}	
+        US_technocratic_economy3 = {
+	     picture = idea_man_five_year_plan_industry
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.05
+			  production_speed_buildings_factor = 0.1
+			  consumer_goods_factor = -0.03
+			  research_speed_factor = 0.1
+			}
+		}
+		USA_technocratic_miracle = {
+	     picture = idea_man_five_year_plan_industry
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.5
+			  production_speed_buildings_factor = 0.1
+			  consumer_goods_factor = -0.05
+			}
+		}		
+		USA_socialist_propaganda = {
+	     picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+			    tag = USA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.1
+			  war_support_weekly = 0.003
+			}
+		}	
+        GSA_american_aryans = {
+	     picture = GSA_Aryans
+			
+			allowed = {
+			    tag = GSA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  political_power_gain = 0.25
+			  stability_weekly = 0.001
+			  resistance_growth_on_our_occupied_states = 0.05
+              army_attack_factor = 0.05
+			}
+		}				
+		GSA_agricultural_industry = {
+	     picture = GSA_agriculture
+			
+			allowed = {
+			    tag = GSA
+				always = yes
+			}
+			
+            available = {
+			  
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  consumer_goods_factor = -0.05
+			  state_resources_factor = -0.05
+			  conscription_factor = -0.03
+			  industrial_capacity_factory = -0.1
+			}
+		}				
+	}
+	
+}

@@ -1,0 +1,402 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = GetConservativeLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_conservative_destroyed_flag
+		}
+		localization_key = SOV_conservative_status_crushed
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_conservative_integrated_flag
+		}
+		localization_key = SOV_conservative_status_integrated
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_democratic_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+localization_key = [?SOV_conservative_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetLiberalLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_liberal_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_democratic_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_liberal_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_liberal_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetSocialistLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_socialist_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_leftist_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_democratic_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_socialist_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_socialist_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetFascistLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_fascist_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_national_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_fascist_rebellion
+		}
+		localization_key = SOV_loyalty_status_rebellion
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_fascist_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_fascist_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetHundredsLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_hundreds_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_hundreds_rebellion
+		}
+		localization_key = SOV_loyalty_status_rebellion
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_national_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_hundreds_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_hundreds_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetMilitaryLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_military_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_military_in_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_military_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_military_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetCommunistLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_communist_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_communist_rebellion
+		}
+		localization_key = SOV_loyalty_status_rebellion
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_leftist_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_communist_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_communist_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetTsaristLoyaltyStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_tsarist_destroyed_flag
+		}
+		localization_key = SOV_loyalty_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_tsarist_rebellion
+		}
+		localization_key = SOV_loyalty_status_rebellion
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_tsarist_in_coalition_flag
+		}
+		localization_key = SOV_loyalty_status_coalition
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_tsarist_integrated_flag
+		}
+		localization_key = SOV_loyalty_status_integrated
+	}
+	text = {
+		localization_key = [?SOV_tsarist_loyalty_status_amount]
+	}
+}
+
+defined_text = {
+	name = GetConservativePopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_conservative_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			has_country_flag = SOV_conservative_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@democratic|0]"
+	}
+}
+
+defined_text = {
+	name = GetLiberalPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_liberal_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_liberal_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@liberal|0]"
+	}
+}
+
+defined_text = {
+	name = GetSocialistPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_socialist_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_socialist_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@marxism|0]"
+	}
+}
+
+defined_text = {
+	name = GetFascistPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_fascist_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_fascist_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@fascism|0]"
+	}
+}
+
+defined_text = {
+	name = GetHundredsPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_hundreds_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_hundreds_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@national_socialism|0]"
+	}
+}
+
+defined_text = {
+	name = GetMilitaryPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_military_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_military_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@neutrality|0]"
+	}
+}
+
+defined_text = {
+	name = GetCommunistPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_communist_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_communist_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@communism|0]"
+	}
+}
+
+defined_text = {
+	name = GetTsaristPopularityStatus
+	text = {
+		trigger = {
+			has_country_flag = SOV_tsarist_destroyed_flag
+		}
+		localization_key = SOV_popularity_status_crushed
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_tsarist_integrated_flag
+		}
+		localization_key = SOV_popularity_status_integrated
+	}
+	text = {
+		localization_key = "[?party_popularity_100@paternal_autocrat|0]"
+	}
+}

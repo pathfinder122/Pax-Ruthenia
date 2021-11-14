@@ -1,0 +1,366 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = british_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = ENG
+		}
+	}
+	default = no
+	
+    focus = {
+		id = ENG_dying_nation
+		available = {
+		}
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 40
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+             bonus = 0.25
+             uses = 2
+             category = industry
+            }
+		}
+	}
+	focus = {
+		id = ENG_fading_colonies
+		prerequisite = { focus = ENG_dying_nation }
+		available = {
+
+		}
+		icon = GFX_focus_eng_decolonization
+		x = -6
+		y = 1
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  
+		}
+	}
+	focus = {
+		id = ENG_develop_africa
+		prerequisite = { focus = ENG_fading_colonies }
+		available = {
+
+		}
+		icon = GFX_focus_generic_africa_factory
+		x = -3
+		y = 2
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  every_state = {
+		      limit = { 
+				 is_on_continent = africa
+			     infrastructure > 2
+				 is_owned_or_subject_trigger = yes
+				}
+				add_extra_state_shared_building_slots = 1
+		    }
+			
+            ENG_british_overextension_up = yes			
+		}
+	}
+	focus = {
+		id = ENG_batswanan_chromium
+		prerequisite = { focus = ENG_develop_africa }
+		available = {
+
+		}
+		icon = GFX_goal_generic_construction
+		x = -5
+		y = 3
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  542 = {
+             add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+                  type = infrastructure
+                  level = 1
+                  instant_build = yes
+                }
+			  add_resource = {
+                  type = chromium
+                  amount = 10
+                  state = 542
+                }
+            }		  
+		}
+		
+	}
+	focus = {
+		id = ENG_tanzanian_rubber
+		prerequisite = { focus = ENG_batswanan_chromium }
+		available = {
+
+		}
+		icon = GFX_goal_generic_construction
+		x = -5
+		y = 4
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  542 = {
+             add_extra_state_shared_building_slots = 2
+			 add_building_construction = {
+                  type = infrastructure
+                  level = 1
+                  instant_build = yes
+                }
+			  add_resource = {
+                  type = rubber
+                  amount = 6
+                  state = 546
+                }
+            }		  
+		}
+		
+	}
+	focus = {
+		id = ENG_east_african_railway
+		prerequisite = { focus = ENG_develop_africa }
+		available = {
+
+		}
+		icon = GFX_focus_generic_africa_infrastructure
+		x = -1
+		y = 3
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  546 = {
+             add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+                  type = infrastructure
+                  level = 2
+                  instant_build = yes
+                }
+			  
+            }
+		    547 = {
+             add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+                  type = infrastructure
+                  level = 2
+                  instant_build = yes
+                }
+			  
+            }
+	    }
+	}
+	focus = {
+		id = ENG_egyptian_railway
+		prerequisite = { focus = ENG_east_african_railway }
+		available = {
+
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 4
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  546 = {
+             add_extra_state_shared_building_slots = 2
+			 add_building_construction = {
+                  type = infrastructure
+                  level = 3
+                  instant_build = yes
+                }
+			  
+            }
+		    547 = {
+             add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+                  type = infrastructure
+                  level = 2
+                  instant_build = yes
+                }
+			  
+            }
+	    }
+	}
+	focus = {
+		id = ENG_fading_economy
+		prerequisite = { focus = ENG_dying_nation }
+		available = {
+
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 5
+		y = 1
+		relative_position_id = ENG_dying_nation
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		  
+		}
+	}
+	focus = {
+		id = ENG_prime_minister_dead
+		available = {
+		}
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		x = 15
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = ENG_political_instability
+			
+		}
+	}
+
+	focus = {
+		id = ENG_deputy_churchill_leads
+		prerequisite = { focus = ENG_prime_minister_dead }
+		available = {
+
+		}
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 1
+		relative_position_id = ENG_prime_minister_dead
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = ENG_calm_liberals
+		prerequisite = { focus = ENG_deputy_churchill_leads }
+		available = {
+
+		}
+		icon = GFX_goal_generic_soviet_construction
+		x = 2
+		y = 2
+		relative_position_id = ENG_prime_minister_dead
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		 add_stability = 0.01
+		  add_popularity = {
+             ideology = liberal
+             popularity = 0.03
+            }
+		}
+	}
+	focus = {
+		id = ENG_calm_labour
+		prerequisite = { focus = ENG_deputy_churchill_leads }
+		available = {
+
+		}
+		icon = GFX_goal_generic_soviet_construction
+		x = -2
+		y = 2
+		relative_position_id = ENG_prime_minister_dead
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		 add_stability = 0.01
+		  add_popularity = {
+             ideology = communism
+             popularity = 0.03
+            }
+		}
+	}
+	focus = {
+		id = ENG_reassure_colonies
+		prerequisite = { focus = ENG_calm_labour }
+		available = {
+            
+		}
+		icon = GFX_goal_generic_soviet_construction
+		x = -2
+		y = 3
+		relative_position_id = ENG_prime_minister_dead
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		 CAN = {
+		     add_political_power = 50
+			 add_stability = 0.03
+		    }
+			WST = {
+		     add_political_power = 50
+			 add_stability = 0.03
+		    }
+			SAF = {
+		     add_political_power = 50
+			 add_stability = 0.03
+		    }
+			NZL = {
+		     add_political_power = 50
+			 add_stability = 0.03
+		    }
+			RAJ = {
+		     add_political_power = 50
+			 add_stability = 0.03
+		    }
+			
+		}
+	}
+
+}

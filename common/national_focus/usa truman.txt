@@ -1,0 +1,66 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+
+focus_tree = {
+	id = usa_truman_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 5
+			tag = USA
+		}
+		
+		modifier = {
+			add = 5
+			original_tag = USA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3200 }
+	default = no
+	
+	focus = {
+		id = USA_america_is_back
+		icon = GFX_focus_truman
+		x = 15
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		 has_government = neutrality
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+         add_political_power = 150
+		 add_stability = 0.03
+		}
+	}
+
+}   
+
+

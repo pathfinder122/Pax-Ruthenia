@@ -1,0 +1,2294 @@
+﻿focus_tree = {
+	id = japan_wtt_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = JAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1200 }
+
+	focus = {
+		id = strengthen_control
+		icon = GFX_focus_strengthen_control
+		x = 15
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = imperial_army's_plan
+		icon = GFX_focus_imperial_army
+		prerequisite = {
+         focus = strengthen_control
+		}
+		
+		x = -2
+		y = 1
+		relative_position_id = strengthen_control
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = {
+			 extensive_conscription
+			}		
+		 add_war_support = 0.05
+		}	 
+	}
+	focus = {
+		id = build_airbases_in_china
+		icon = GFX_focus_china_air
+		prerequisite = {
+         focus = imperial_army's_plan
+		}
+		
+		x = -2
+		y = 1
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           609 = {
+		      add_building_construction = {
+                 type = air_base
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+			611 = {
+		      add_building_construction = {
+                 type = air_base
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+		}	 
+	}
+	focus = {
+		id = imperial_navy's_plan
+		icon = GFX_focus_imperial_navy
+		prerequisite = {
+         focus = strengthen_control
+		}
+		
+		x = 2
+		y = 1
+		relative_position_id = strengthen_control
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		   528 = {
+		     add_extra_state_shared_building_slots = 3
+		     add_building_construction = {
+                 type = dockyard
+                 level = 3
+                 instant_build = yes
+                }
+		    }
+			add_tech_bonus = {
+             bonus = 1.0
+             uses = 1
+             category = cv_tech
+            }
+		 add_war_support = 0.05
+		}	 
+	}
+	focus = {
+		id = build_naval_bases
+		icon = GFX_focus_naval_bases
+		prerequisite = {
+         focus = imperial_navy's_plan
+		}
+		
+		x = 2
+		y = 1
+		relative_position_id = imperial_navy's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		   524 = {
+		     add_extra_state_shared_building_slots = 3
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = naval_base
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+			630 = {
+		     add_extra_state_shared_building_slots = 3
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = naval_base
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+			647 = {
+		     add_extra_state_shared_building_slots = 3
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = naval_base
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+		}	 
+	}
+    focus = {
+		id = the_philippines
+		icon = GFX_focus_philippines
+		prerequisite = {
+         focus = build_naval_bases
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = build_naval_bases
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		   327 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = arms_factory
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+			624 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+		    }
+			627 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+		    }
+		}	 
+	}
+	focus = {
+		id = integrate
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = {
+         focus = the_philippines
+		}
+		mutually_exclusive = { focus = loyal_subject }	
+		x = 2
+		y = 1
+		relative_position_id = the_philippines
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+         PHI = {
+		     is_puppet_of = JAP
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		   annex_country = {
+              target = PHI
+              transfer_troops = yes
+            }
+			add_stability = -0.03
+		}	 
+	}
+	focus = {
+		id = loyal_subject
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = the_philippines }
+		mutually_exclusive = { focus = integrate }
+		x = 0
+		y = 1
+		relative_position_id = the_philippines
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+         PHI = {
+		     is_puppet_of = JAP
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		 PHI = {
+		     add_stability = 0.05
+			 add_war_support = 0.03
+			 transfer_state = 647
+		    }
+		}	 
+	}
+	focus = {
+		id = greater_east_asian_co-prosperity_sphere
+		icon = GFX_focus_jap_pacific_guardian
+		prerequisite = { focus = strengthen_control }
+		x = 0
+		y = 1
+		relative_position_id = strengthen_control
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+         
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		 create_faction = "Greater East Asian Co-Propserity Sphere"
+		 add_ideas = {
+			      JAP_geacps
+			    }
+				
+          every_country = {
+             limit = {
+                 is_puppet_of = JAP
+                }
+			  add_ideas = {
+			      geacps_members
+			    }
+            }
+		}	 
+	}
+	focus = {
+		id = form_the_government_generals
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = east_asian_politics}
+		x = 2
+		y = 1
+		relative_position_id = east_asian_politics
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+          add_political_power = 150
+		}	 
+	}
+	focus = {
+		id = invade_china
+		icon = GFX_focus_attack_china2
+		prerequisite = { focus = build_airbases_in_china }
+		x = 0
+		y = 1
+		relative_position_id = build_airbases_in_china
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+         CHI = {
+		      create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = ROOT
+                }
+		    }
+		  PRC = {
+		     create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = ROOT
+                }
+		  
+		    }
+		}	 
+	}
+	focus = {
+		id = reorganise_china
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = invade_china }
+		x = -2
+		y = 2
+		relative_position_id = build_airbases_in_china
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  CHI = {
+		      is_puppet_of = JAP
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+          JAP = {
+		      transfer_state = 608
+			  transfer_state = 597
+			  transfer_state = 598
+			  transfer_state = 743
+			  transfer_state = 613
+			  transfer_state = 596
+			  transfer_state = 695
+			  transfer_state = 608
+               
+		    }
+			JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = GXC
+                }
+			} 
+		    JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = SHX
+                }
+			} 
+			JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = XSM
+                }
+			} 
+			CHI = {
+			  add_stability = 0.05
+			}
+		}	 
+	}
+	focus = {
+		id = through_the_himalayas
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = upgrade_military_factories }
+		x = 0
+		y = 3
+		relative_position_id = build_airbases_in_china
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  date > 1939.01.01
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+			JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = TIB
+                }
+			} 
+		    JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = BHU
+                }
+			} 
+			JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = NEP
+                }
+			} 
+		}	 
+	}
+	focus = {
+		id = upgrade_military_factories
+		icon = GFX_focus_new_mils
+		prerequisite = { focus = invade_china }
+		x = 0
+		y = 2
+		relative_position_id = build_airbases_in_china
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+         533 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = arms_factory
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+            532 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = arms_factory
+                 level = 2
+                 instant_build = yes
+                }
+		    }			
+		}	 
+	}
+	focus = {
+		id = prepare_for_the_ultimate_war
+		icon = GFX_focus_ultimate_war
+		prerequisite = { focus = imperial_army's_plan }
+		x = 0
+		y = 1
+		relative_position_id = imperial_army's_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  date > 1939.01.01
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+         531 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = arms_factory
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+            534 = {
+		     add_extra_state_shared_building_slots = 1
+		     add_building_construction = {
+                 type = arms_factory
+                 level = 1
+                 instant_build = yes
+                }
+		    }
+			add_tech_bonus = {
+             bonus = 1.0
+             uses = 1
+             category = land_doctrine
+            }
+			
+		}	 
+	}
+	focus = {
+		id = build_up_manchuria
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = prepare_for_the_ultimate_war }
+		x = 0
+		y = 2
+		relative_position_id = imperial_army's_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+            714 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type =infrastructure
+                 level = 3
+                 instant_build = yes
+                }
+		    }
+            761 = {
+		     add_extra_state_shared_building_slots = 2
+		     add_building_construction = {
+                 type = infrastructure
+                 level = 3
+                 instant_build = yes
+                }
+		    }
+			MAN = {
+			    add_tech_bonus = {
+                   bonus = 0.5
+                   uses = 1
+                    category = infantry_tech
+                }
+			   add_tech_bonus = {
+                  bonus = 0.5
+                 uses = 1
+                 category = logistics_tech
+                }  
+			}
+		}	 
+	}
+	focus = {
+		id = medium_tanks
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = build_up_manchuria }
+		x = 0
+		y = 3
+		relative_position_id = imperial_army's_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+			JAP = {
+			    add_tech_bonus = {
+                   bonus = 2.0
+                   uses = 1
+                    category = cat_medium_armor
+                }
+			   add_tech_bonus = {
+                  bonus = 0.5
+                 uses = 1
+                 category = armor
+                } 
+              add_war_support = 0.03				
+			}
+		}	 
+	}
+	focus = {
+		id = operation_kangaerarenai
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = medium_tanks }
+		x = 0
+		y = 4
+		relative_position_id = imperial_army's_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  date > 1940.01.01
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+			JAP = {
+			  
+              add_war_support = 0.1				
+			}
+			JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = SOV
+                }
+			} 
+		}	 
+	}
+	focus = {
+		id = peace_for_siberia
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = operation_kangaerarenai }
+		x = 0
+		y = 5
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  has_war_with = SOV
+		  SOV = {
+		      surrender_progress > 0.30
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+          SOV = {
+		     country_event = {
+                  id = soviet.65
+                  days = 1
+                  random = 1
+                  random_days = 1
+                }
+		    }
+			add_political_power = 100
+		}	 
+	}
+	focus = {
+		id = colonists_to_siberia
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = peace_for_siberia }
+		mutually_exclusive = { focus = march_to_moscow }
+		x = 0
+		y = 6
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  JAP = {
+		     controls_state = 408
+			  controls_state = 409
+			   controls_state = 560
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+         282 = {
+		     add_manpower = -20000
+		    }
+			531 = {
+		     add_manpower = -10000
+		    }
+			408 = {
+		     add_manpower = 10000
+			   add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+			409 = {
+		     add_manpower = 10000
+			 add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+			560 = {
+		     add_manpower = 10000
+			 add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+		}	 
+	}
+	focus = {
+		id = final_integration
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = colonists_to_siberia }
+		x = -2
+		y = 7
+		relative_position_id = imperial_army's_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  JAP = {
+		     controls_state = 408
+			  controls_state = 409
+			   controls_state = 560
+			   controls_state = 566
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+			JAP = {
+			  add_state_core = 409
+			  add_state_core = 408
+			  add_state_core = 560
+			  add_state_core = 655
+			  add_stability = 0.03
+			}
+		}	 
+	}
+	focus = {
+		id = siberian_zaibatsu
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = colonists_to_siberia }
+		x = 0
+		y = 7
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  JAP = {
+		     controls_state = 408
+			  controls_state = 409
+			   controls_state = 560
+			   controls_state = 566
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+			409 = {
+			    add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+			}
+			408 = {
+			 	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+			}
+		}	 
+	}
+	focus = {
+		id = march_to_moscow
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = operation_kangaerarenai }
+		mutually_exclusive = { focus = colonists_to_siberia }
+		y = 6
+		x = 2
+		relative_position_id = imperial_army's_plan
+		
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  JAP = {
+		      has_war_with = SOV
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+			add_war_support = 0.05
+			add_stability = -0.05
+			SOV = {
+			  add_war_support = 0.1
+			}
+		}	 
+	}
+	focus = {
+		id = total_war
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = march_to_moscow }
+		y = 7
+		x = 2
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  JAP = {
+		      has_war_with = SOV
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		 add_ideas = {
+		     total_mob
+		    }
+		}	 
+	}
+	focus = {
+		id = eternal_war_doctrine
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = total_war }
+		y = 8
+		x = 2
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  JAP = {
+		      has_war_with = SOV
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		      add_tech_bonus = {
+                   bonus = 1
+                   uses = 2
+                    category = land_doctrine
+                }
+		  add_political_power = 200
+		  add_war_support = 1
+		  add_stability = -0.1
+		}	 
+	}
+	focus = {
+		id = the_japanese_empire
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = eternal_war_doctrine }
+		y = 9
+		x = 2
+		relative_position_id = imperial_army's_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		   219 = {
+		      is_owned_or_subject_trigger = yes
+		    } 
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		  add_political_power = 200
+		  add_war_support = 0.2
+		  add_stability = 0.2
+		}	 
+	}
+	focus = {
+		id = east_asian_politics
+		icon = GFX_goal_generic_tanks
+		y = 10
+		x = 30
+        
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 has_completed_focus = greater_east_asian_co-prosperity_sphere
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		 every_country = {
+             limit = {
+                 is_puppet_of = JAP
+                }
+			  add_ideas = {
+			      asian_parliament
+			    }
+            }
+		}	 
+	}
+	focus = {
+		id = japanese_pacific_states
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = form_the_government_generals }
+		y = 2
+		x = 6
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 JPS = { exists = yes }
+		 JPS = { controls_state = 378
+		     controls_state = 385
+			 controls_state = 386
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		  378 = {
+		     set_state_name = "Kariforunia"
+		    }
+		  385 = {
+		      set_state_name = "Meiji"  
+		    }
+		  386 = {
+		      set_state_name = "Atarashī Honshū"
+		    }
+		 JPS = {
+              add_stability = -0.05
+            }
+		}			
+	}
+	focus = {
+		id = colonise_america
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = japanese_pacific_states }
+		y = 3
+		x = 6
+        relative_position_id = east_asian_politics
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 JPS = { exists = yes }
+		 JPS = { controls_state = 378
+		     controls_state = 385
+			 controls_state = 386
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           	282 = {
+		     add_manpower = -40000
+		    }
+			531 = {
+		     add_manpower = -20000
+		    }
+		  378 = {
+		      	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				add_manpower = 50000
+		    }
+		  385 = {
+		       	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				add_manpower = 10000
+		    }
+		 JPS = {
+              add_stability = 0.02
+            }
+		}			
+	}
+	focus = {
+		id = japanese_australia
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = form_the_government_generals }
+		y = 2
+		x = 4
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 JPA = { exists = yes }
+		 JPA = { controls_state = 285
+		     controls_state = 517
+			 controls_state = 522
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		  285 = {
+		     set_state_name = "Shin Hokkaidō"
+		    }
+		  517 = {
+		      set_state_name = "Minami ōsutoraria"  
+		    }
+		  522 = {
+		      set_state_name = "Nishi ōsutoraria"
+		    }
+		 JPA = {
+              add_stability = -0.05
+            }
+		}			
+	}
+	focus = {
+		id = colonise_australia
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = japanese_australia }
+		y = 3
+		x = 4
+        relative_position_id = east_asian_politics
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 JPA = { exists = yes }
+		 JPA = { controls_state = 285
+		     controls_state = 517
+			 controls_state = 522
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           	282 = {
+		     add_manpower = -40000
+		    }
+			531 = {
+		     add_manpower = -20000
+		    }
+		  285 = {
+		      	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				add_manpower = 50000
+		    }
+		  522 = {
+		       	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				add_manpower = 10000
+		    }
+		 JPA = {
+              add_stability = 0.02
+            }
+		}			
+	}
+	focus = {
+		id = japanese_ceylon
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = form_the_government_generals }
+		y = 2
+		x = 2
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 JPC = { exists = yes }
+		 JPC = { controls_state = 422
+		     controls_state = 423
+			 controls_state = 425
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {	
+		  422 = {
+		     set_state_name = "Shin Hokkaidō"
+		    }
+		  423 = {
+		      set_state_name = "Minami ōsutoraria"  
+		    }
+		  425 = {
+		      set_state_name = "Nishi ōsutoraria"
+		    }
+		 JPC = {
+              add_stability = -0.05
+            }
+		}			
+	}
+	focus = {
+		id = colonise_ceylon
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = japanese_ceylon }
+		y = 3
+		x = 2
+        relative_position_id = east_asian_politics
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		 JPC = { exists = yes }
+		 JPC = { controls_state = 422
+		     controls_state = 425
+		    }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           	282 = {
+		     add_manpower = -20000
+		    }
+			531 = {
+		     add_manpower = -20000
+		    }
+		  425 = {
+		      	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				add_manpower = 30000
+		    }
+		  422 = {
+		       	add_extra_state_shared_building_slots = 1
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				add_manpower = 10000
+		    }
+		 JPC = {
+              add_stability = 0.02
+            }
+		}			
+	}
+	focus = {
+		id = yen_bloc
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = east_asian_politics }
+		y = 1
+		x = -2
+        relative_position_id = east_asian_politics
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+          add_ideas = {
+			  yen_bloc
+			}	
+
+		}			
+	}
+	focus = {
+		id = invest_in_manchukuo
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = yen_bloc }
+		y = 2
+		x = -2
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  MAN = { exists = yes }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           328 = {
+		       	add_extra_state_shared_building_slots = 2
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 2
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 3
+                 instant_build = yes
+                }
+		    }
+		}			
+	}
+	focus = {
+		id = invest_in_mengkukuo
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = yen_bloc }
+		y = 2
+		x = -4
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  MEN = { exists = yes }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           611 = {
+		       	add_extra_state_shared_building_slots = 2
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 1
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+		}			
+	}
+	focus = {
+		id = invest_in_korea
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = yen_bloc }
+		y = 2
+		x = -6
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+           525 = {
+		       	add_extra_state_shared_building_slots = 2
+			 	add_building_construction = {
+                 type = infrastructure
+                 level = 3
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+		    }
+		}			
+	}
+	focus = {
+		id = the_perfect_puppet
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = invest_in_manchukuo	}
+		y = 3
+		x = -2
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  MAN = { exists = yes }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+          MAN = {
+		      add_autonomy_ratio = {
+                  value = -0.1
+                 localization = 
+                }
+		    }
+		}			
+	}
+	focus = {
+		id = khans_legacy
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = invest_in_mengkukuo }
+		y = 3
+		x = -4
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		  MEN = { exists = yes }
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+          MEN = {
+		      add_autonomy_ratio = {
+                  value = -0.1
+                 localization = 
+                }
+		    }
+		}			
+	}
+	focus = {
+		id = fate_of_korea
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = invest_in_korea }
+		y = 3
+		x = -6
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+         JAP = {
+		     country_event = {
+                  id = japan.21
+                  days = 1
+                  random = 1
+                  random_days = 1
+                }
+		    }
+		}			
+	}
+	focus = {
+		id = fate_of_geacps
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = fate_of_korea }
+		prerequisite = { focus = khans_legacy }
+		prerequisite = { focus = the_perfect_puppet }
+		prerequisite = { focus = colonise_america }
+		prerequisite = { focus = colonise_australia }
+		prerequisite = { focus = colonise_ceylon }
+		y = 4
+		x = 0
+        relative_position_id = east_asian_politics
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+         add_political_power = 100
+		}			
+	}
+	focus = {
+		id = greater_japan
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = fate_of_geacps }
+		mutually_exclusive = { focus = east_asian_federation }
+		mutually_exclusive = { focus = autonomous_union }
+		y = 5
+		x = 0
+        relative_position_id = east_asian_politics
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+         add_stability = -0.2
+		 
+		 set_cosmetic_tag = greater_japan1
+		 
+		    every_country = {
+               limit = {
+                 is_puppet_of = ROOT
+                }
+               ROOT = {
+                  annex_country = { target = PREV transfer_troops = no }
+                }
+            }
+		}			
+	}
+	focus = {
+		id = east_asian_federation
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = fate_of_geacps }
+		mutually_exclusive = { focus = greater_japan }
+		mutually_exclusive = { focus = autonomous_union }
+		y = 5
+		x = -2
+        relative_position_id = east_asian_politics
+		
+		cost = 15
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+         add_stability = -0.2
+		 add_political_power = -200
+		 
+		 add_ideas = {
+		     JAP_east_asian_federation
+		    }
+			
+			set_cosmetic_tag = asia_fed
+			
+			every_state = {
+                limit = {
+                    THIS.owner = { is_puppet_of = ROOT }
+                }
+               add_core_of = ROOT
+            }
+	        every_country = {
+               limit = {
+                 is_puppet_of = ROOT
+                }
+               ROOT = {
+                  annex_country = { target = PREV transfer_troops = yes }
+                }
+            }
+		}			
+	}
+	focus = {
+		id = autonomous_union
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = fate_of_geacps }
+		mutually_exclusive = { focus = greater_japan }
+		mutually_exclusive = { focus = east_asian_federation }
+		y = 5
+		x = 2
+        relative_position_id = east_asian_politics
+		
+		cost = 15
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+         add_stability = 0.1
+		 add_political_power = 150
+			
+            every_country = {
+               limit = {
+                 is_puppet_of = ROOT
+                }
+                add_autonomy_ratio = {
+                  value = 0.1
+                 localization = 
+                }
+				add_stability = 0.05
+            }
+		}			
+	}
+	focus = {
+		id = support_asian_independence
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = loyal_subject
+           focus = integrate
+		}
+		y = 1
+		x = 1
+        relative_position_id = loyal_subject
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		 add_political_power = 150
+			
+            INS = {
+               limit = {
+                 is_puppet_of = HOL
+                }
+                add_autonomy_ratio = {
+                  value = 0.05
+                 localization = 
+                }
+				add_stability = -0.05
+            }
+		    MAL = {
+               limit = {
+                 is_puppet_of = ENG
+                }
+                add_autonomy_ratio = {
+                  value = 0.05
+                 localization = 
+                }
+				add_stability = -0.05
+            }
+		}			
+	}
+	focus = {
+		id = go_south
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = support_asian_independence}
+		y = 2
+		x = 1
+        relative_position_id = loyal_subject
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+          add_tech_bonus = {
+             bonus = 1.0
+             uses = 1
+             category = tp_tech
+            }
+		    add_tech_bonus = {
+             bonus = 0.75
+             uses = 1
+             category = cl_tech
+            }
+		}			
+	}
+	focus = {
+		id = strike_the_europeans
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = loyal_subject}
+		y = 3
+		x = 1
+        relative_position_id = loyal_subject
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+          JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = INS
+                }
+			} 
+			JAP = {
+			   create_wargoal = {
+                  type = puppet_wargoal_focus
+                  target = MAL
+                }
+			} 
+		}			
+	}
+	focus = {
+		id = go_east
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = support_asian_independence }
+		y = 2
+		x = 3
+        relative_position_id = loyal_subject
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		  add_timed_idea = {
+		      idea = JAP_naval_build_up
+			  days = 365
+		    }
+		  
+          add_tech_bonus = {
+             bonus = 1.0
+             uses = 1
+             category = cv_tech
+            }
+		    add_tech_bonus = {
+             bonus = 0.4
+             uses = 1
+             category = dd_tech
+            }
+		}			
+	}
+	focus = {
+		id = crush_the_revolution
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = go_east }
+		mutually_exclusive = { focus = a_new_ally }
+		y = 3
+		x = 3
+        relative_position_id = loyal_subject
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		   	add_opinion_modifier = {
+                target = USA
+                modifier = large_decrease
+            }
+			
+		}			
+	}
+	focus = {
+		id = a_new_ally
+		icon = GFX_goal_generic_tanks
+		prerequisite = { focus = go_east }
+		mutually_exclusive = { focus = crush_the_revolution }
+		y = 3
+		x = 5
+        relative_position_id = loyal_subject
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		    diplomatic_relation = {
+               country = USA
+               relation = non_aggression_pact
+               active = yes
+            }
+			add_opinion_modifier = {
+                target = USA
+                modifier = large_increase
+            }
+		}			
+	}
+}

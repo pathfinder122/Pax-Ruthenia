@@ -1,0 +1,543 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+
+focus_tree = {
+	id = snf_focus_tree
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SNF
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = SNF
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1000 }
+	default = no
+	
+	focus = {
+		id = SNF_the_admiral_arrives
+		icon = GFX_focus_yamamoto
+		x = 15
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+         add_political_power = 50
+		 add_stability = 0.02
+         create_navy_leader = {
+	         name = "Isoroku Yamamoto"
+	         picture = gfx/leaders/JAP/Portrait_Japan_Isoroku_Yamamoto.dds
+	         traits = { aviation_enthusiast bold air_controller flight_deck_manager superior_tactician spotter }
+	         skill = 5
+	         attack_skill = 5
+	         defense_skill = 2
+	         maneuvering_skill = 3
+	         coordination_skill = 6
+            }	
+            inherit_technology = JAP
+		}
+	}
+	focus = {
+		id = SNF_seize_american_ships
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_the_admiral_arrives }
+		x = 15
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		 SNF = {
+		       	create_equipment_variant = {
+		          name = "Yorktown Class"
+	           	  type = ship_hull_carrier_1
+		          name_group = JAP_CV_HISTORICAL
+		          parent_version = 0
+		          modules = {
+		              fixed_ship_deck_slot_1 = ship_deck_space
+			          fixed_ship_deck_slot_2 = ship_deck_space
+			          fixed_ship_anti_air_slot = ship_anti_air_1
+			          fixed_ship_radar_slot = empty
+			          fixed_ship_engine_slot = carrier_ship_engine_2
+			          fixed_ship_secondaries_slot = ship_secondaries_2
+			          front_1_custom_slot = ship_deck_space
+	             	}
+	            }
+			    create_equipment_variant = {
+		           name = "Meiji Class"				# represents Farragut, Porter, Mahan classes
+		           type = ship_hull_light_1
+		           name_group = JAP_DD_HISTORICAL
+		            parent_version = 0
+		             modules = {
+		                 fixed_ship_battery_slot = ship_light_battery_2
+		                 fixed_ship_anti_air_slot = ship_anti_air_1
+		                 fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		                 fixed_ship_radar_slot = ship_sonar_1
+		                 fixed_ship_engine_slot = light_ship_engine_2
+		                 fixed_ship_torpedo_slot = ship_torpedo_1
+		                 mid_1_custom_slot = ship_torpedo_1
+		                 rear_1_custom_slot = ship_depth_charge_1
+	                 	}
+	                }
+				create_equipment_variant = {
+	              	name = "Hirohito Class"				
+		            type = ship_hull_heavy_1
+	              	name_group = USA_BB_HISTORICAL
+		            parent_version = 0
+		            modules = {
+		               fixed_ship_battery_slot = ship_heavy_battery_2
+			           fixed_ship_anti_air_slot = ship_anti_air_1
+			           fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			           fixed_ship_radar_slot = empty
+			           fixed_ship_engine_slot = heavy_ship_engine_1
+			           fixed_ship_secondaries_slot = ship_secondaries_1
+			           fixed_ship_armor_slot = ship_armor_bb_2
+			           front_1_custom_slot = ship_anti_air_1
+		               mid_1_custom_slot = ship_secondaries_1
+			           mid_2_custom_slot = ship_airplane_launcher_1
+			           rear_1_custom_slot = ship_heavy_battery_2
+		            }
+             	}
+                create_ship = {
+                 type = ship_hull_carrier_1
+				 equipment_variant = "Yorktown Class"
+                 creator = SNF
+                 name = "IJN Nippon"
+                }
+				create_ship = {
+                 type = ship_hull_carrier_1
+				 equipment_variant = "Yorktown Class"
+                 creator = SNF
+                 name = "IJN Nagasaki"
+                }
+			    create_ship = {
+                 type = ship_hull_light_1
+				 equipment_variant = "Meiji Class"
+                 creator = SNF
+                 name = "IJN Meiji"
+                }
+				create_ship = {
+                 type = ship_hull_light_1
+				 equipment_variant = "Meiji Class"
+                 creator = SNF
+                 name = "IJN Sanfuranshisuko"
+                }
+				create_ship = {
+                 type = ship_hull_light_1
+				 equipment_variant = "Meiji Class"
+                 creator = SNF
+                 name = "IJN Tokyo"
+                }
+				create_ship = {
+                 type = ship_hull_light_1
+				 equipment_variant = "Meiji Class"
+                 creator = SNF
+                 name = "IJN Osaka"
+                }
+				create_ship = {
+                 type = ship_hull_light_1
+				 equipment_variant = "Meiji Class"
+                 creator = SNF
+                 name = "IJN Nagoya"
+                }
+				create_ship = {
+                 type = ship_hull_heavy_1
+				 equipment_variant = "Hirohito Class"
+                 creator = SNF
+                 name = "IJN Hirohito"
+                }
+			   
+            }
+		}
+	}
+	focus = {
+		id = SNF_clear_space_for_colonists
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_seize_american_ships }
+		x = 10
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_manpower = -5000
+		  add_timed_idea = {
+		      idea = SNF_preparations_for_colonists
+			  days = 90
+		    }
+		  811 = {
+		      add_extra_state_shared_building_slots = 4
+		        add_building_construction = {
+                 type = arms_factory
+                 level = 2
+                 instant_build = yes
+                }
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				
+		    }  
+		}
+	}
+	focus = {
+		id = SNF_construct_colonist_ships
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_clear_space_for_colonists }
+		x = 10
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_equipment_to_stockpile = {
+             type = convoy
+             amount = 75
+             producer = JAP
+            }
+		}
+	}
+	focus = {
+		id = SNF_invite_zaibatsu
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_construct_colonist_ships }
+		x = 8
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_ideas = {
+		      SNF_american_zaibatsu
+		    }
+			JAP = {
+			  add_ideas = {
+			     JAP_american_zaibatsu
+			    }
+			}
+		}
+	}
+	focus = {
+		id = SNF_open_japanese_businesses
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_construct_colonist_ships }
+		x = 10
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_tech_bonus = {
+             bonus = 0.5
+             uses = 1
+             category = industry
+            }
+			811 = {
+		      add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+                 type = industrial_complex
+                 level = 2
+                 instant_build = yes
+                }
+				
+		    }  
+		}
+	}
+	focus = {
+		id = SNF_japans_resort
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_construct_colonist_ships }
+		x = 12
+		y = 4
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_stability = 0.05
+		  add_ideas = {
+		      SNF_japan_resort
+		    } 
+		}
+	}
+	focus = {
+		id = SNF_open_japanese_schools
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_invite_zaibatsu }
+		prerequisite = { focus = SNF_japans_resort }
+		prerequisite = { focus = SNF_open_japanese_businesses }
+
+		x = 9
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_stability = -0.03
+		  add_tech_bonus = {
+             bonus = 1
+             uses = 1
+             category = engineers_tech
+            }
+			add_tech_bonus = {
+             bonus = 1
+             uses = 1
+             category = electronics
+            }	    	
+            add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SNF_build_shintoist_shrines
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_invite_zaibatsu }
+		prerequisite = { focus = SNF_japans_resort }
+		prerequisite = { focus = SNF_open_japanese_businesses }
+
+		x = 11
+		y = 5
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		  add_stability = -0.03
+		  add_war_support = 0.075
+		}
+	}
+	focus = {
+		id = SNF_the_colonists_arrive
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SNF_open_japanese_schools }
+		prerequisite = { focus = SNF_build_shintoist_shrines }
+
+		x = 10
+		y = 6
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+
+		available = {
+		}
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			282 = {
+			  add_manpower = -50000
+			}
+			532 = {
+			  add_manpower = -10000
+			}
+			531 = {
+			  add_manpower = -20000
+			}
+			529 = {
+			  add_manpower = -20000
+			}
+			811 = {
+		      add_manpower = 100000
+		    }
+			add_stability = 0.05
+		}
+	}
+}   
+
+

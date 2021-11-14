@@ -1,0 +1,66 @@
+JAP_intervene_in_china = {
+	allowed = {
+		original_tag = JAP
+	}
+}
+
+JAP_southern_expansion = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		is_puppet = no
+	}
+}
+
+JAP_pacific_guardian = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		is_puppet = no
+		has_completed_focus = JAP_pacific_guardian
+	}
+}
+
+JAP_colonial_independence = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		is_puppet = no
+		has_completed_focus = JAP_pacific_guardian
+	}
+}
+JAP_interservice_rivalry = {
+	allowed = {
+		original_tag = JAP
+		has_dlc = "Waking the Tiger"
+	}
+}
+JAP_greater_east_asia = {
+    icon = JAP_pacific_guardian
+    picture = GFX_decision_cat_picture_geacps
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		is_puppet = no
+		has_completed_focus = greater_east_asian_co-prosperity_sphere
+	}
+}
+
+JAP_yen_bloc = {
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		is_puppet = no
+		has_completed_focus = yen_bloc
+	}
+}
