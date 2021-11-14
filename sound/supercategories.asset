@@ -1,0 +1,7 @@
+category = {
+	name = "Super Events"
+	soundeffects = {
+		superev_uscollapse
+	}
+	compressor = master_compressor
+}
