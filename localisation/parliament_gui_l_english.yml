@@ -1,0 +1,19 @@
+﻿l_english:
+
+ # Decisions
+  parliament_gui_decision_category:0 "The Russian Duma§!"
+  parliament_gui_decision_category_desc:0 "The Russian Duma has been the staple of a true Russian democracy. No matter if one is in a mainstream party, such as the Kadets or URP, or a radical faction, like the NSPR or RFP, all Russian people get a voice on the Duma. For as long as the Russian Duma remains alive, it will be a shining light in Russia, protecting it from the darkness of communism and national-socialism"
+
+ # Scripted GUIs
+  parliament_gui_title:0 "Grid Parliament"
+  semicircle_parliament_gui_title:0 "Semicircle Parliament"
+  parliament_main_icon_tt:0 "[GetParliamentSeatName] - [GetParliamentPartyName]"
+  parliament_seat_text:0 "Seat [?temp_seat|Y0]"
+  parliament_member_text:0 "[GetParliamentPartyName] - [?parliament_seat_array^parliament_member_index] Seats"
+  parliament_modify_button_tt:0 "§GCtrl+Click§! to add §Y5§! Seats from [GetParliamentPartyName]\n§GShift+Click§! to subtract §Y5§! Seats from [GetParliamentPartyName]"
+
+  party_1_text:0 "§YKadets§!"
+  party_2_text:0 "§BUnion of Russian People§!"
+  party_3_text:0 "§GNew Socialist Party of Russia§!"
+  party_4_text:0 "§ORussian Fascist Party§!"
+  party_5_text:0 "§GNational Revival Front§!"
