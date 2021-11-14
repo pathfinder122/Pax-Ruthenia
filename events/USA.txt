@@ -1,0 +1,290 @@
+﻿###########################
+# USA Events
+###########################
+
+add_namespace = usa
+
+# Amelia Eartharts wants to join the USAAC
+country_event = {
+	id = usa.65
+	title = "Howard's Plan"
+	desc = usa.65.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.65.a #accept
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = usa.66
+	title = "Al Capone's Chicago"
+	desc = usa.66.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.66.a #accept
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 25
+		complete_national_focus = USA_like_dominos
+	}
+	option = {
+		name = usa.66.b #accept
+		ai_chance = {
+			factor = 100
+		}
+		CHC = { change_tag_from = ROOT }
+		complete_national_focus = USA_like_dominos
+	}
+	
+}
+country_event = {
+	id = usa.67
+	title = "Like dominos..."
+	desc = usa.67.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.67.a #accept
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -75
+		add_stability = -0.03
+		complete_national_focus = USA_pacific_secession
+	}
+	option = {
+		name = usa.67.b #accept
+		ai_chance = {
+			factor = 100
+		}
+		GSA = { change_tag_from = ROOT }
+	    complete_national_focus = USA_pacific_secession
+	}
+	option = {
+		name = usa.67.c #accept
+		ai_chance = {
+			factor = 100
+		}
+		CSA = { change_tag_from = ROOT }
+		complete_national_focus = USA_pacific_secession
+	}
+	option = {
+		name = usa.67.d #accept
+		ai_chance = {
+			factor = 100
+		}
+		USB = { change_tag_from = ROOT }
+		complete_national_focus = USA_pacific_secession
+	}
+	
+}
+country_event = {
+	id = usa.68
+	title = "The 3rd People's Congress"
+	desc = usa.68.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.68.a #accept
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 75
+			USA = {
+		     country_event = {
+                  id = usa.69
+                  days = 1
+                  random = 1
+                  random_days = 1
+                }
+		    }
+	}
+	
+	
+}
+country_event = {
+	id = usa.69
+	title = "Earl Browder calls for a vote"
+	desc = usa.69.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.69.a #accept
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 25
+		add_stability = 0.02
+		USA = {
+		     country_event = {
+                  id = usa.70
+                  days = 1
+                  random = 1
+                  random_days = 1
+                }
+		    }
+	}
+	
+	
+}
+country_event = {
+	id = usa.70
+	title = "Election Day"
+	desc = usa.70.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.70.a #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = 25
+		add_stability = 0.02
+		USA = {
+		     country_event = {
+                  id = usa.71
+                  days = 1
+                  random = 1
+                  random_days = 1
+                }
+		    }
+	}
+	option = {
+		name = usa.70.b #accept
+		ai_chance = {
+			factor = 20
+		}
+		add_stability = -0.10
+		complete_national_focus = USA_the_coup
+	}
+	
+	
+}
+country_event = {
+	id = usa.71
+	title = "And the winner is:"
+	desc = usa.71.desc
+	picture = GFX_report_event_usa_destroyers
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.71.a #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_stability = 0.02
+		complete_national_focus = USA_earl_maintains_power
+	}
+	option = {
+		name = usa.71.b #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_stability = 0.02
+		complete_national_focus = USA_gus_rules_supreme
+	}
+	option = {
+		name = usa.71.c #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_stability = 0.02
+		complete_national_focus = USA_truman_wins
+	}
+	option = {
+		name = usa.71.d #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_stability = 0.02
+		complete_national_focus = USA_anarchist_victory
+	}
+	
+	
+}
+country_event = {
+	id = usa.73
+	title = "The Pacific Secedes"
+	desc = usa.72.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.73.a #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -75
+		add_stability = -0.03
+	}
+	option = {
+		name = usa.73.b #accept
+		ai_chance = {
+			factor = 20
+		}
+		SNF = { change_tag_from = ROOT }
+	}
+	option = {
+		name = usa.73.c #accept
+		ai_chance = {
+			factor = 20
+		}
+		PSA = { change_tag_from = ROOT }
+	}
+	option = {
+		name = usa.73.d #accept
+		ai_chance = {
+			factor = 20
+		}
+		CAS = { change_tag_from = ROOT }
+	}
+	
+	
+}
+country_event = {
+	id = usa.74
+	title = "The Battle of Jacksonville"
+	desc = usa.74.desc
+	picture = GFX_report_event_usa_election_generic
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = usa.74.a #accept
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = 75
+		add_stability = 0.05
+		remove_ideas = USA_kkk3
+	}
+}

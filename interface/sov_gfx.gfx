@@ -1,0 +1,45 @@
+spriteTypes = {	
+
+    SpriteType = {
+	name = "GFX_sov_conservative_faction"
+	texturefile = "gfx/interface/sov_conservative_faction.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_sov_liberal_faction"
+	texturefile = "gfx/interface/sov_liberal_faction.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_sov_socialist_faction"
+	texturefile = "gfx/interface/sov_socialist_faction.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_sov_fascist_faction"
+	texturefile = "gfx/interface/sov_fascist_faction.dds"			
+	}
+
+	
+	SpriteType = {
+	name = "GFX_sov_military_faction"
+	texturefile = "gfx/interface/sov_military_faction.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_sov_hundreds_faction"
+	texturefile = "gfx/interface/sov_hundreds_faction.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_sov_communist_faction"
+	texturefile = "gfx/interface/sov_communist_faction.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_sov_tsarist_faction"
+	texturefile = "gfx/interface/sov_tsarist_faction.dds"			
+	}
+
+
+	}
