@@ -1,0 +1,24 @@
+state={
+	id=808
+	name="STATE_808"
+	manpower = 1517081
+	
+	state_category = city
+	
+	history={
+		owner = USA
+		victory_points = {
+			9450 30
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 4
+			air_base = 1
+		}
+		add_core_of = USA
+	}
+
+	provinces={
+          709 4854 751 5205 10599
+	}
+}

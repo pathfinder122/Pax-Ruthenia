@@ -1,0 +1,30 @@
+state={
+	id=811
+	name="STATE_811"
+	manpower = 2790931
+	
+	state_category = megalopolis
+	
+	history={
+		owner = USA
+		victory_points = {
+			9671 25
+		}
+                victory_points = {
+			9713 1 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 5
+			air_base = 7
+                        9671 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = USA
+	}
+
+	provinces={
+          9671 3677 3678 9637 677 11658 6699 9713
+	}
+}

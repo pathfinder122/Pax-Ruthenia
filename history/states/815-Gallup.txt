@@ -1,0 +1,19 @@
+state={
+	id=815
+	name="STATE_815"
+	manpower = 78213
+	
+	state_category = megalopolis
+	
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+	}
+
+	provinces={
+         5044 10914 1972 12552 10645
+	}
+}

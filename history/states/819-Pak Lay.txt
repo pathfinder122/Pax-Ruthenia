@@ -1,0 +1,17 @@
+state={
+	id=819
+	name="STATE_819"
+	provinces={
+		10456 10330 10356
+	}
+	history={
+		owner = FRA
+		add_core_of = FRA
+                add_core_of = LAO
+                add_core_of = SIA
+
+	}
+	manpower=35000
+	buildings_max_level_factor=1.000
+	state_category = rural
+}
